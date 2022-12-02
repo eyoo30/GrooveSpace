@@ -1,0 +1,388 @@
+* {
+   box-sizing: border-box;
+ }
+  
+body, html {
+   font-family: 'Roboto Slab', sans-serif;
+   margin: 0;
+   width: 100%;
+   height: 100%;
+   padding: 0;
+}
+
+  
+main {
+   display: flex;
+   padding: 2rem;
+   background-color: black;
+}
+
+.col {
+   display: flex;
+   flex-grow: 1;
+   padding-bottom: 2rem;
+   flex-direction: column;
+}
+
+/* navbar and footer styling */
+.navbar-brand {
+   padding-left: 2rem;
+   color:white;
+   font-size: 1.75rem;
+   position: relative;
+   top: 1.5rem;
+   font-size: 2.5rem;
+}
+
+.navbar-dark a.navbar-brand, .navbar-dark .navbar-nav a.nav-link {
+   color: black;
+}
+
+.navbar .container-fluid {
+   text-align: center;
+}
+
+footer, .card.browse-card, .main-browse, .container-fluid.footer{
+   background-color: black;
+}
+
+footer p, footer p a, .col, .duet_from{
+   color: white;
+   text-decoration: none;
+}
+
+.container-fluid {
+   padding-left: 0;
+   padding-right: 0;
+}
+
+
+.container {
+   padding-top: 1.5rem;
+   padding-bottom: 1.5rem;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+}
+
+/* main body styling */
+#music {
+   font-size: 2rem;
+   font-weight: 300;
+}
+
+#card-row {
+   padding-top: 0rem;
+}
+
+.card-title {
+   font-size: 1.25rem;
+   font-style: italic;
+}
+
+/* music page styling */
+
+
+a {
+   text-decoration: none;
+}
+
+.card-title, .card-text {
+   color: black;
+}
+
+.about {
+   display: flex;
+   color: white;
+   flex-direction: column;
+   align-items: center;
+}
+
+.about h1, .about > p {
+   text-align: center;
+   padding-top: 2rem;
+}
+
+.about > p:nth-child(2) {
+   font-style: italic;
+}
+
+.about > p:nth-child(3), .about > p:nth-child(5) {
+   padding: none;
+   margin: none;
+   font-size: 12px;
+   font-style: italic;
+}
+
+#card-row.row {
+   display: flex;
+   justify-content: center;
+}
+.list{
+   flex-direction: row;
+}
+.list.col {
+    padding-top: 2rem;
+    padding-bottom: 0;
+}
+.progress{
+   width: 100%;
+}
+.progress-div{
+   padding-top: 3%;
+}
+
+.duration{
+   padding-top: 0;
+}
+.browse-card button.play, .browse-card button.pause, .browse-card .duration{
+   color: black;
+}
+.play-pause-div{
+   text-align: end;
+   padding-right: 0;
+   padding-top: 1.5%;
+}
+button.play, button.pause, button.likes{
+   color: white;
+   font-size: 2vw;
+   padding-left: 0;
+}
+/* Browse Component */
+.img-list{
+   height: 100px;
+   width: 100px;
+   border-radius: 10%;
+   border: 1px solid rgb(54, 54, 54);
+}
+.browse-info, a.link{
+   color: black;
+   text-decoration: none;
+}
+div.browse-img-div{
+   justify-content: center;
+   text-align: center;
+   margin: auto;
+}
+.browse-title{
+   font-size: 25px;
+   margin-top: 2%;
+   margin-bottom: 0;
+}
+.browse-artist{
+   font-style: italic;
+   font-weight: 300;
+   font-size: 20px;
+   margin: 0;
+}
+.browse-release{
+   font-weight: 200;
+   font-size: 15px;
+   margin: 0;
+}
+.browse-desc{
+   font-weight: 100;
+   font-size: 13px;
+   margin: 0;
+}
+.sort-by, .col-3{
+   text-align: right;
+}
+.browse-desc{
+   display: none;
+}
+.main-browse .audio-control, .home .audio-control{
+   display: none;
+}
+
+/* Screen sizes for 768px and above */
+@media(min-width: 768px) {
+   .row {
+      flex-direction: row;
+   }
+   /* navbar and footer styling - big screen */
+   .card-body {
+      display: flex;
+      flex-grow: 1;
+      flex-wrap: wrap;
+   }
+
+   header, footer, .container-fluid.footer{
+      background-color: #FAF9F6;
+   }
+
+   .navbar-brand, .nav-link {
+      top: 0;
+      color: black;
+   }
+
+   footer p, footer p a{
+      color: black;
+      text-decoration: none;
+   }
+   form, audio {
+      width: 100%;
+   }
+
+   .navbar-nav {
+      margin-left: auto;
+   }
+
+   .nav-item, img {
+      padding: 0rem;
+   }
+
+   .material-icons {
+      position: relative;
+      top: 5px;
+      right: 8px;
+      padding-left: .4rem;
+      font-size: 3rem;
+   }
+   
+   /* music page styling - big screen */
+   .card-img-top {
+      display: flex;
+      max-width: 300px;
+      max-height: 300px;
+      padding-bottom: 1rem;
+      border-radius: 10px 10px 0 0;
+   }
+   .release-date, .description, .duets, .lg, .duet-from, .duet-from-link{
+      color: white;
+      font-size: 1.5rem;
+   }
+   button.pause, button.play{
+      padding-left: 0;
+   }
+   .about > p {
+      font-size: 1.25rem;
+   }
+
+   .about > p:nth-child(3), .about > p:nth-child(5){
+      font-size: 16px;
+   }
+
+   footer .row {
+      height: 125px;
+   }
+
+
+   /* Big display: Browse.js */
+   .img-list{
+      width: 100%;
+      height: 100%;
+      border-radius: 5%;
+      border: 2px solid black;
+      margin-top: 1rem;
+   }
+   .list{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+   .main-browse, .align-items-center, .card.browse-card{
+      background-color: white;
+
+   }
+   .main-browse{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+   .card.browse-card{
+      flex-direction: column;
+   }
+   .card.browse-card{
+      height: 20rem;
+   }
+   .link{
+      text-decoration: none;
+   }
+   .col-3.sort-by, .col-2.sort-button{
+      width: 15%;
+      text-align: center;
+   }
+   .col-6.sort-input{
+      width: 20%
+   }
+   .browse-card{
+      display: inline;
+   }
+   .browse-info .text-light{
+      color: black !important;
+      margin: auto;
+   }
+
+   .col-8.browse-info{
+      width: 90%;
+      padding-top: 10%;
+      text-align: center;
+   }
+   .browse-title{
+      font-size: 2.5vw;
+   }
+   .browse-artist{
+      font-size: 2vw;
+   }
+   .browse-release, .browse-desc, .sort-by{
+      font-size: 1.5vw;
+   }
+   .text-light{
+      margin-left: 0;
+      word-wrap: break-word;
+   }
+   .row.med-row{
+      flex-wrap: wrap;
+      padding-left: 15%;
+   }
+   .browse-img-div{
+      height: 10rem;
+      width: 10rem;
+   }
+   .align-items-center{
+      padding-left: 15%;
+   }
+
+
+}
+@media(min-width: 992px) {
+   .list.col{
+      flex-direction: row;
+      padding-bottom: 0;
+      margin-left: 0;
+      padding-top: 2%;
+   }
+
+   .img-list{
+      width: 80%;
+      margin: 0;
+   }
+   .browse-img-div{
+      margin: auto;
+      height: 80%;
+      width: 80%;
+   }
+   .main-browse{
+      padding-right: 10%;
+      padding-left: 10%;
+   }
+   .col-8.browse-info{
+      width: 72%;
+      text-align: left;
+      padding-top: 0;
+   }
+
+   .card.browse-card{
+      width: 80%;
+      height: 35%;
+   }
+   .browse-desc{
+      display: inline;
+   }
+   .main-browse .audio-control, .home .audio-control{
+      display: flex;
+   }
+}
+
+
